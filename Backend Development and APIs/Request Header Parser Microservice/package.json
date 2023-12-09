@@ -1,0 +1,28 @@
+{
+  "name": "whoami-api",
+  "version": "0.0.1",
+  "description": "An FCC Backend Challenge",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "dependencies": {
+    "cors": "^2.8.0",
+    "express": "^4.12.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JustSkyDev/FreeCodeCamp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JustSkyDev/FreeCodeCamp/issues"
+  },
+  "homepage": "https://github.com/JustSkyDev/FreeCodeCamp#readme",
+  "author": "JustSkyDev",
+  "keywords": [
+    "node",
+    "express",
+    "freeCodeCamp"
+  ],
+  "license": "MIT"
+}
