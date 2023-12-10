@@ -20,10 +20,10 @@ module.exports = async (req, res) => {
       },
       {
         $push: {
-          logs: {
+          log: {
             description,
             duration,
-            date: ParsedDate(date).toDateString(),
+            date: ParsedDate(date || Date.now()).toDateString(),
           },
         },
       },
@@ -34,9 +34,10 @@ module.exports = async (req, res) => {
 
     return res.json({
       _id,
+      username: DB.username,
       description,
       duration,
-      date: ParsedDate(date).toDateString(),
+      date: ParsedDate(date || Date.now()).toDateString(),
     });
   } catch (error) {
     console.error(error);

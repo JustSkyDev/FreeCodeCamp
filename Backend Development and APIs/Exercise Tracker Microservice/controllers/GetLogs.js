@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
     const from = fromDate ? new Date(fromDate) : null;
     const to = toDate ? new Date(toDate) : null;
 
-    let filteredLog = DB.logs.filter((exercise) => {
+    let filteredLog = DB.log.filter((exercise) => {
       const exerciseDate = new Date(exercise.date);
       if (from && to) return exerciseDate >= from && exerciseDate <= to;
       else if (from) return exerciseDate >= from;
@@ -26,7 +26,11 @@ module.exports = async (req, res) => {
       _id,
       username: DB.username,
       count: filteredLog.length,
-      logs: filteredLog,
+      log: filteredLog.map((data) => ({
+        description: data.description,
+        duration: Number(data.duration),
+        date: data.date,
+      })),
     });
   } catch (error) {
     console.error(error);

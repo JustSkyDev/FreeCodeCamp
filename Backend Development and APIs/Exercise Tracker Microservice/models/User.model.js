@@ -16,7 +16,7 @@ const UserSchema = new Schema({
   date: String,
   duration: Number,
   description: String,
-  logs: [LogsSchema],
+  log: [LogsSchema],
 });
 
 const User = new mongoose.model("UserExercise", UserSchema);
