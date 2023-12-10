@@ -7,9 +7,7 @@ const routes = require("./routes/route");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const MONGO_URL =
-  process.env.MONGO_URL ||
-  "mongodb+srv://JustSkyDev001:puk2rnbYwh4sBf3q@elgatedatasbase.mtw7tmb.mongodb.net/UserExercise?retryWrites=true&w=majority";
+const MONGO_URL = process.env.MONGO_URL;
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
