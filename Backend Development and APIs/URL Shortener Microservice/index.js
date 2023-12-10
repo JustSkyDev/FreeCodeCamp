@@ -79,3 +79,4 @@ app.get("/api/shorturl/:urlId", async (req, res) => {
   await console.log("Database connected");
   await app.listen(PORT, () => console.log("Your app running on PORT:", PORT));
 })();
+
